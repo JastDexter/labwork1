@@ -34,6 +34,13 @@
                     <mainClass>com.jastdexter.java.labs.App</mainClass>
                 </configuration>
             </plugin>
+            <!--<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <argLine>-Xmx1024m -XX:MaxPermSize=512m</argLine>
+                </configuration>
+            </plugin>-->
         </plugins>
         <resources>
             <resource>
@@ -42,6 +49,8 @@
                 <includes>
                     <include>**/*.fxml</include>
                     <include>*.fxml</include>
+                    <include>**/*.png</include>
+                    <include>*.png</include>
                 </includes>
             </resource>
         </resources>

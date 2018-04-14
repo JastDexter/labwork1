@@ -1,12 +1,8 @@
 package com.jastdexter.java.labs;
 
-import com.jastdexter.java.labs.model.generator.ArrayGenerator;
-import com.jastdexter.java.labs.model.generator.RandomArrayGenerator;
-import com.jastdexter.java.labs.view.MainWindow;
+import com.jastdexter.java.labs.view.MainWindowController;
 import javafx.application.Application;
 import javafx.stage.Stage;
-
-import java.util.ArrayList;
 
 
 public class App extends Application {
@@ -16,9 +12,9 @@ public class App extends Application {
     }
 
     public void start(Stage primaryStage) throws Exception {
-        MainWindow newWindow = new MainWindow();
+        MainWindowController newWindow = new MainWindowController(new Stage());
         newWindow.load();
-        newWindow.show();
+        newWindow.getStage().show();
     }
 }
 

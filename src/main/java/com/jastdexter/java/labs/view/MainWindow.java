@@ -13,13 +13,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainWindowController {
+public class MainWindow {
     private Parent root;
     private Scene scene;
-
-    public Stage getStage() {
-        return stage;
-    }
 
     private Stage stage;
     @FXML
@@ -29,7 +25,7 @@ public class MainWindowController {
     @FXML
     private Button somethingSettingsButton;
 
-    public MainWindowController(Stage window) {
+    public MainWindow(Stage window) {
         this.stage = window;
     }
 
@@ -38,23 +34,21 @@ public class MainWindowController {
         scene = new Scene(root);
         stage.setTitle("FXML Welcome");
         stage.setScene(scene);
-        initLayouts();
         initGraphics();
     }
 
     private void initGraphics() {
-        Image settingsImage = new Image( getClass().getResourceAsStream("/images/settings.png"), 20, 20, false, true);
-        chartSettingsButton = (Button)root.lookup("#chartSettingsButton");
+        Image settingsImage = new Image(getClass().getResourceAsStream("/images/settings.png"), 20, 20, false, true);
+        chartSettingsButton = (Button) root.lookup("#chartSettingsButton");
         chartSettingsButton.setGraphic(new ImageView(settingsImage));
-        colorSettingsButton = (Button)root.lookup("#colorSettingsButton");
+        colorSettingsButton = (Button) root.lookup("#colorSettingsButton");
         colorSettingsButton.setGraphic(new ImageView(settingsImage));
-        somethingSettingsButton = (Button)root.lookup("#somethingSettingsButton");
+        somethingSettingsButton = (Button) root.lookup("#somethingSettingsButton");
         somethingSettingsButton.setGraphic(new ImageView(settingsImage));
     }
 
-    private void initLayouts(){
-
+    public Stage getStage() {
+        return stage;
     }
-
 
 }

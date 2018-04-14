@@ -1,6 +1,6 @@
 package com.jastdexter.java.labs;
 
-import com.jastdexter.java.labs.view.MainWindowController;
+import com.jastdexter.java.labs.view.MainWindow;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -12,7 +12,7 @@ public class App extends Application {
     }
 
     public void start(Stage primaryStage) throws Exception {
-        MainWindowController newWindow = new MainWindowController(new Stage());
+        MainWindow newWindow = new MainWindow(new Stage());
         newWindow.load();
         newWindow.getStage().show();
     }
